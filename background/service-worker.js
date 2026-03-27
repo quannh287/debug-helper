@@ -186,6 +186,7 @@ const SW = {
   },
 
   async bufferEvent(event) {
+    console.count('[DH] bufferEvent: ' + event.type); // TEMP instrumentation
     const session = await Storage.getCurrentSession();
     if (!session) return;
 
@@ -202,6 +203,7 @@ const SW = {
   },
 
   async flushBuffer() {
+    console.count('[DH] flushBuffer called'); // TEMP instrumentation
     if (this.eventBuffer.length === 0) return;
 
     const session = await Storage.getCurrentSession();

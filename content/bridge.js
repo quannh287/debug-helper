@@ -8,6 +8,7 @@
     if (e.source !== window) return;
     if (!e.data || e.data.source !== 'debug-helper-main') return;
 
+    console.count('[DH] bridge relay: ' + e.data.type); // TEMP instrumentation
     const msg = { ...e.data };
     delete msg.source;
 
