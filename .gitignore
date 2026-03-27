@@ -16,3 +16,7 @@ debug-report-*.zip
 # Node (if ever added)
 node_modules/
 package-lock.json
+
+# AI assistant
+CLAUDE.md
+.claude/settings.local.json
